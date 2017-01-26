@@ -12,18 +12,10 @@
             </div>
             <nav class="main-navigation">
                 <ul>
-                    <li>
-                        <a href="#">Студия</a>
-                    </li>
-                    <li>
-                        <a href="#">Клиенты</a>
-                    </li>
-                    <li>
-                        <a href="#">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
+                    <li><a href="#">Студия</a><li>
+                    <li><a href="#">Клиенты</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
             <div class="cart">
@@ -37,108 +29,163 @@
         </div>
     
     </div>
-    <main class=""></main>
-      <div class="catalog-filters">
-          <form action="#" method="get">
-          <div class="filter-price">
-              <span class="filter-group">Стоимость:</span>
-              <div class="price-slider"> <!-- без понятия, как он сделан --></div>
-              <label>От<input type="text" name="from" id="from"></label>
-              <label>до<input type="text" name="to" id="to"></label>
-            
-          <div class="filter-grid">
-              <span class="filter-group">Сетка:</span>
-              <label><input type="radio" name="grid" value="adaptive">Адаптивная</label>
-              <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
-              <label><input type="radio" name="grid" value="liquid">Резиновая</label>
-          </div>
-              
-          <div class="filter-grid"></div>
-              <span class="filter-group">Особенности:</span>
-              <label><input type="checkbox" name="slider" id="slider">Слайдер</label>
-              <label><input type="checkbox" name="features-block" id="features-block">Блок преимуществ</label>
-              <label><input type="checkbox" name="news" id="news">Новости</label>
-              <label><input type="checkbox" name="gallery" id="gallery">Галерея</label>
-              <label><input type="checkbox" name="cart" id="cart">Корзина</label>
-          </div>
-              <input type="submit" value="Показать">
-              
-          </form>
-      </div>
-      <div class="catalog-gallery">
-          <div class="catalog-sorting">
-              <span class="sorting-header">Сортировать:</span>
-              <div class="select-type">
-                <ul>
-                  <li><a href="#">По цене</a></li>
-                  <li><a href="#">По типу</a></li>
-                  <li><a href="#">По названию</a></li>
-                </ul>
+    <main>
+         <div class="container">
+              <div class="catalog-filters">
+                  <form action="#" method="get">
+                      <div class="filter-price">
+                      <span class="filter-group">Стоимость:</span>
+                     <div class="range-filter">
+                         <div class="range-controls">
+                              <div class="scale">
+                                    <div class="bar"></div>
+                              </div>
+                              <div class="toggle min-toggle"></div>
+                              <div class="toggle max-toggle"></div>
+                         </div>
+                         <div class="price-controls">
+                          <input class="min-price" type="text" value="0">
+                          <input class="max-price" type="text" value="30000">
+                     </div>
+                     </div>
+                     </div>
+                      <div class="filter-grid">
+                          <span class="filter-group">Сетка:</span>
+                          <label><input type="radio" name="grid" value="adaptive">Адаптивная</label>
+                          <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
+                          <label><input type="radio" name="grid" value="liquid">Резиновая</label>
+                      </div>
+                      <div class= "filter-features">
+                          <span class="filter-group">Особенности:</span>
+                          <label><input type="checkbox" name="slider" id="slider">Слайдер</label>
+                          <label><input type="checkbox" name="features-block" id="features-block">Блок преимуществ</label>
+                          <label><input type="checkbox" name="news" id="news">Новости</label>
+                          <label><input type="checkbox" name="gallery" id="gallery">Галерея</label>
+                          <label><input type="checkbox" name="cart" id="cart">Корзина</label>
+                      </div>
+                      <input type="submit" value="Показать">
+                  </form>
               </div>
-              <div class="sorting-type"><!--Не уверена, что знаю, как стрелочки сортировки сделать.--></div>
-          </div>
-          
-          <!--Sedona-->
-          <div class="catalog-item">
-              <div class="catalog-item-top"><!--тут еще для 3 кружков будет что-то--></div>
-              <div class="catalog-item-picture">
-                <img src="http://placehold.it/360x575" width="360" height="575" alt="Sedona">
+              <div class="catalog-gallery">
+                  <div class="catalog-sorting">
+                  <span class="sorting-header">Сортировать:</span>
+                  <div class="select-type">
+                    <ul>
+                      <li><a href="#">По цене</a></li>
+                      <li><a href="#">По типу</a></li>
+                      <li><a href="#">По названию</a></li>
+                    </ul>
+                  </div>
+                  <div class="sorting-type">
+                      <li><a href="#"></a></li>
+                      <li><a href="#"></a></li>
+               <!--Что должно быть заключено в тег <a>? -->
+                  </div>
               </div>
-              <div class="catalog-item-info">
-                  <a class="catalog-item-name" href="#">Sedona</a>
-                  <p>Информационный сайт для туристов</p>
-                  <div class="buy-item"><a href="#">9900 руб.</a></div>
-              </div>
-          </div>
+                  <div class="catalog-item-list">
+                      
+                          <!--Sedona-->
+                          <div class="catalog-item">
+                              <div class="catalog-item-top">
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                              </div>
+                              <img src="http://placehold.it/360x575" width="360" height="575" alt="Sedona">
+                              <div class="catalog-item-info">
+                                  <a class="catalog-item-name" href="#">Sedona</a>
+                                  <p>Информационный сайт для туристов</p>
+                                  <div class="buy-item"><a href="#">9900 руб.</a></div>
+                              </div>
+                          </div>
+
+                          <!--Pink-->
+                          <div class="catalog-item">
+                              <div class="catalog-item-top">
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                              </div>
+                              <img src="http://placehold.it/360x575" width="360" height="575" alt="Pink">
+                              <div class="catalog-item-info">
+                                  <a class="catalog-item-name" href="#">Pink app</a>
+                                  <p>Продуктовый лендинг приложения для iOS и Android</p>
+                                  <div class="buy-item"><a href="#">9900 руб.</a></div>
+                              </div>
+                          </div>
+
+                          <!--Borodinsky-->
+                          <div class="catalog-item">
+                              <div class="catalog-item-top">
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                              </div>
+                              <img src="http://placehold.it/360x575" width="360" height="575" alt="Barbershop Borodinsky">
+                              <div class="catalog-item-info">
+                                  <a class="catalog-item-name" href="#">Barbershop</a>
+                                  <p>Сайт салона красоты. Для мужчин, да.</p>
+                                  <div class="buy-item"><a href="#">9900 руб.</a></div>
+                              </div>
+                          </div>
+
+                          <!--Mishka-->
+                          <div class="catalog-item">
+                              <div class="catalog-item-top">
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                              </div>
+                                <img src="http://placehold.it/360x575" width="360" height="575" alt="Mishka">
+                                <div class="catalog-item-info">
+                                  <a class="catalog-item-name" href="#">Mishka</a>
+                                  <p>Интернет-магазин вязаных игрушек</p>
+                                  <div class="buy-item"><a href="#">9900 руб.</a></div>
+                              </div>
+                          </div>
+
+                          <!--Обучение-->
+                          <div class="catalog-item">
+                              <div class="catalog-item-top">
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                              </div>
+                                <img src="http://placehold.it/360x575" width="360" height="575" alt="A plus">
+                                <div class="catalog-item-info">
+                                  <a class="catalog-item-name" href="#">Pink app</a>
+                                  <p>Лендинг курсов повышения квалификации</p>
+                                  <div class="buy-item"><a href="#">9900 руб.</a></div>
+                              </div>
+                          </div>
+
+                          <!--Кваст-->
+                          <div class="catalog-item">
+                              <div class="catalog-item-top">
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                                  <span class="top-decoration"></span>
+                              </div>
+                                <img src="http://placehold.it/360x575" width="360" height="575" alt="Кваст">
+                                <div class="catalog-item-info">
+                                  <a class="catalog-item-name" href="#">Кваст</a>
+                                  <p>Промо-сайт производителя крафтового кваса</p>
+                                  <div class="buy-item"><a href="#">9900 руб.</a></div>
+                              </div>
+                          </div>
+                  </div>
           
-          <!--Pink-->
-          <div class="catalog-item">
-              <div class="catalog-item-top"><!--тут еще для 3 кружков будет что-то--></div>
-              <div class="catalog-item-picture">
-                <img src="http://placehold.it/360x575" width="360" height="575" alt="Pink">
-              </div>
+          <div class="pagination">
+              <ul>
+                  <li>1</li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">Следующая</a></li>
+              </ul>
           </div>
-          
-          <!--Borodinsky-->
-          <div class="catalog-item">
-              <div class="catalog-item-top"><!--тут еще для 3 кружков будет что-то--></div>
-              <div class="catalog-item-picture">
-                <img src="http://placehold.it/360x575" width="360" height="575" alt="Barbershop Borodinsky">
-              </div>              
           </div>
-          
-          <!--Mishka-->
-          <div class="catalog-item">
-              <div class="catalog-item-top"><!--тут еще для 3 кружков будет что-то--></div>
-              <div class="catalog-item-picture">
-                <img src="http://placehold.it/360x575" width="360" height="575" alt="Mishka">
-              </div>              
-          </div>
-          
-          <!--Обучение-->
-          <div class="catalog-item">
-              <div class="catalog-item-top"><!--тут еще для 3 кружков будет что-то--></div>
-              <div class="catalog-item-picture">
-                <img src="http://placehold.it/360x575" width="360" height="575" alt="Обучение">
-              </div>              
-          </div>
-          
-          <!--Кваст-->
-          <div class="catalog-item">
-              <div class="catalog-item-top"><!--тут еще для 3 кружков будет что-то--></div>
-              <div class="catalog-item-picture">
-                <img src="http://placehold.it/360x575" width="360" height="575" alt="Кваст">
-              </div>              
-          </div>
-          
-          <div class="catalog-pages">
-              <div class="page-button">1</div>
-              <div class="page-button"><a href="#">2</a></div>
-              <div class="page-button"><a href="#">3</a></div>
-              <div class="page-button"><a href="#">Следующая</a></div>
-          </div>
-          
-      </div>
+         </div>
+    </main>
       
     <div class="contacts">
       <div class="container">
@@ -148,18 +195,15 @@
           <p>тел. +7(812)275-75-75</p>
           <a href="#" class="btn">Напишите нам</a>
       </div>
-      </div>    
+      </div>
     </div>
     <footer>
       <div class="container">
           <div class="social">
             <ul>
-                <li>
-                    <a href="#">Вконтакте</a>
-                <li>
-                    <a href="#">Facebook</a>
-                <li>
-                    <a href="#">Instagram</a>
+                <li><a class="vk" href="#">Вконтакте</a></li>
+                <li><a class="facebook" href="#">Facebook</a></li>
+                <li><a class="instagram" href="#">Instagram</a></li>
             </ul>
           </div>
           <div class="social-discount">
