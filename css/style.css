@@ -29,3 +29,91 @@ h3 {
     font-weight: bold;
     font-family: Roboto, Verdana, sans-serif;
 }
+
+.main-header {
+    background-color: #eeeeee;
+    margin-bottom: 80px;
+}
+
+.container {
+    width: 1160px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.main-navigation {
+    width: 980px;
+    float: left;
+}
+
+.cart {
+    width: 160px;
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.offers {
+    margin-bottom: 40px;
+    padding-bottom: 80px;
+    border-bottom: solid 2px #eeeeee;
+}
+
+.offer-column {
+    width: 300px;
+    float: left;
+    margin-right: 100px;
+}
+
+.offer-column:nth-child(3) {
+    margin-right: 0;
+}
+
+.column-left {
+    width: 700px;
+    min-height: 410px;
+    float: left;
+    margin-top: 35px;
+    margin-top: 35px;
+}
+
+.column-right {
+    width: 360px;
+    float: right;
+}
+
+.our-clients {
+    border-top: solid 2px #eeeeee;
+    border-bottom: solid 2px #eeeeee;
+    clear: both;
+    padding-top: 45px;
+    padding-bottom: 48px;
+}
+
+.our-clients a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.address {
+    width: 220px;
+    padding: 50px;
+}
+
+.footer {
+    padding: 70px 0;
+}
+
+.social {
+    width: 380px;
+    float: left;
+}
+
+.social-discount {
+    width: 760 px;
+    float: right;
+}
