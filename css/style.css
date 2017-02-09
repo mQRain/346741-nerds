@@ -30,20 +30,41 @@ h3 {
     font-family: Roboto, Verdana, sans-serif;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .main-header {
     background-color: #eeeeee;
-    margin-bottom: 80px;
+    margin-bottom: 55px;
+    padding-top: 50px;
 }
 
 .container {
-    width: 1160px;
-    padding: 0 10px;
+    width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
 .main-navigation {
     width: 980px;
     float: left;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 160px;
+    float: left;
+    margin-right: 200px;
+}
+
+.main-navigation ul {
+    width: 620px;
+    padding-left: 0px;
+    float: left;
+
 }
 
 .cart {
@@ -51,10 +72,14 @@ h3 {
     float: right;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
+.slider {
     clear: both;
+}
+
+.main-header h1 {
+    clear:both;
+    margin-bottom: 100px;
+    margin-top: 75px;
 }
 
 .offers {
@@ -84,24 +109,69 @@ h3 {
 .column-right {
     width: 360px;
     float: right;
+    min-height: 410px;
+}
+
+.subtitle {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 250px;
+}
+
+.statistics-column {
+    float: left;
+    width: 100px;
+    margin-right: 25px;
+}
+
+.statistics-column:last-child {
+    float: right;
+    width: 105px;
+    margin-right: 0px;
 }
 
 .our-clients {
     border-top: solid 2px #eeeeee;
     border-bottom: solid 2px #eeeeee;
     clear: both;
-    padding-top: 45px;
-    padding-bottom: 48px;
+    font-size: 0;
 }
 
 .our-clients a {
+    position: relative;
     display: inline-block;
+    width: 260px;
+    margin: 0 20px;
+    line-height: 180px;
+    text-align: center;
+}
+
+.our-clients img {
     vertical-align: middle;
+    opacity: .2;
+    cursor: pointer;
+}
+
+.our-clients img:hover {
+    opacity: 1;
+}
+
+.our-clients img:active {
+    opacity: 1;
+}
+
+.our-clients a:first-child {
+    margin-left: 0
+}
+
+.our-clients a:last-child {
+    margin-right: 0
 }
 
 .address {
     width: 220px;
     padding: 50px;
+    margin-bottom: 55px;
 }
 
 .footer {
@@ -111,9 +181,57 @@ h3 {
 .social {
     width: 380px;
     float: left;
+    margin-right: 140px;
 }
 
 .social-discount {
     width: 760 px;
+    float: дуае;
+}
+
+.catalog-filters {
+    width: 260px;
+    float: left;
+    margin-right: 140px;
+}
+
+.catalog-sorting {
+    padding-bottom: 55px;
+}
+
+.select-type {
+    float: left;
+    width: 280px;
+}
+
+.sorting-type {
+    width: 25px;
     float: right;
+}
+
+.sorting-header {
+    float: left;
+    width: 160px;
+    margin-right: 240px;
+}
+
+.catalog-gallery {
+    width: 760px;
+    float: right;
+}
+
+
+.catalog-item {
+    width: 360px;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 36px;
+}
+
+.catalog-item:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.pagination {
+    margin: 60, 0;
 }
