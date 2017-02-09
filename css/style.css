@@ -1,9 +1,13 @@
 body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
     font-weight: 400;
     font-family: Roboto, Verdana, sans-serif;
+
 }
 
 h1 {
@@ -43,7 +47,7 @@ h3 {
 }
 
 .container {
-    width: 1200px;
+    width: 1160px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -62,7 +66,7 @@ h3 {
 
 .main-navigation ul {
     width: 620px;
-    padding-left: 0px;
+    padding: 0px;
     float: left;
 
 }
@@ -115,7 +119,7 @@ h3 {
 .subtitle {
     display: block;
     margin-bottom: 20px;
-    margin-top: 250px;
+    margin-top: 40px;
 }
 
 .statistics-column {
@@ -179,14 +183,18 @@ h3 {
 }
 
 .social {
-    width: 380px;
+    width: 260px;
     float: left;
     margin-right: 140px;
 }
 
+.social ul {
+    padding: 0;
+}
+
 .social-discount {
     width: 760 px;
-    float: дуае;
+    float: left;
 }
 
 .catalog-filters {
@@ -232,6 +240,16 @@ h3 {
     margin-right: 0px;
 }
 
+.catalog-item:nth-child(2n+1) {
+    clear: both;
+}
+
 .pagination {
-    margin: 60, 0;
+    clear: both;
+    margin-top, margin-bottom: 60px;
+    margin-left, margin-right: 0;
+}
+
+.pagination ul {
+    padding: 0;
 }
