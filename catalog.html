@@ -67,17 +67,16 @@
                     <span class="sorting-header">Сортировать:</span>
                     <div class="select-type">
                         <ul>
-                          <li><a href="#">По цене</a></li>
+                          <li class="active"><a href="#">По цене</a></li>
                           <li><a href="#">По типу</a></li>
                           <li><a href="#">По названию</a></li>
                         </ul>
                     </div>
                         <div class="sorting-type">
                             <ul>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
+                                <li><a class="triangle-down" href="#"></a></li>
+                                <li><a class="triangle-up" href="#"></a></li>
                             </ul>
-                   <!--Что должно быть заключено в тег <a>? -->
                         </div>
                     </div>
                         <div class="catalog-item-list clearfix">
@@ -89,11 +88,11 @@
                                     <span class="top-decoration"></span>
                                     <span class="top-decoration"></span>
                                 </div>
-                                <img src="img/g_sedona.jpg" width="360" height="575" alt="Sedona">
+                                <img class="image-border" src="img/g_sedona.jpg" width="360" height="575" alt="Sedona">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">Sedona</a></h2>
                                     <p>Информационный сайт для туристов</p>
-                                    <div class="buy-item"><a href="#">9900 руб.</a></div>
+                                    <a href="#" class="buy-item">9900 руб.</a>
                                 </div>
                             </div>
 
@@ -104,11 +103,11 @@
                                     <span class="top-decoration"></span>
                                     <span class="top-decoration"></span>
                                 </div>
-                                <img src="img/g_pink.jpg" width="360" height="575" alt="Pink">
+                                <img class="image-border" src="img/g_pink.jpg" width="360" height="575" alt="Pink">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">Pink app</a></h2>
                                     <p>Продуктовый лендинг приложения для iOS и Android</p>
-                                    <div class="buy-item"><a href="#">9900 руб.</a></div>
+                                    <a class="buy-item" href="#">9900 руб.</a>
                                 </div>
                             </div>
 
@@ -119,11 +118,11 @@
                                     <span class="top-decoration"></span>
                                     <span class="top-decoration"></span>
                                 </div>
-                                <img src="img/g_barbershop.jpg" width="360" height="575" alt="Barbershop Borodinsky">
+                                <img class="image-border" src="img/g_barbershop.jpg" width="360" height="575" alt="Barbershop Borodinsky">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">Barbershop</a></h2>
                                     <p>Сайт салона красоты. Для мужчин, да.</p>
-                                    <div class="buy-item"><a href="#">9900 руб.</a></div>
+                                    <a class="buy-item" href="#">9900 руб.</a>
                                 </div>
                             </div>
 
@@ -134,11 +133,11 @@
                                     <span class="top-decoration"></span>
                                     <span class="top-decoration"></span>
                                 </div>
-                                <img src="img/g_mishka.jpg" width="360" height="575" alt="Mishka">
+                                <img class="image-border" src="img/g_mishka.jpg" width="360" height="575" alt="Mishka">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">Mishka</a></h2>
                                     <p>Интернет-магазин вязаных игрушек</p>
-                                    <div class="buy-item"><a href="#">9900 руб.</a></div>
+                                    <a class="buy-item" href="#">9900 руб.</a>
                                 </div>
                             </div>
 
@@ -149,11 +148,11 @@
                                     <span class="top-decoration"></span>
                                     <span class="top-decoration"></span>
                                 </div>
-                                <img src="img/g_aplus.jpg" width="360" height="575" alt="A plus">
+                                <img class="image-border" src="img/g_aplus.jpg" width="360" height="575" alt="A plus">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">A plus</a></h2>
                                     <p>Лендинг курсов повышения квалификации</p>
-                                    <div class="buy-item"><a href="#">9900 руб.</a></div>
+                                    <a class="buy-item" href="#">9900 руб.</a>
                                 </div>
                             </div>
 
@@ -164,33 +163,31 @@
                                     <span class="top-decoration"></span>
                                     <span class="top-decoration"></span>
                                 </div>
-                                <img src="img/g_kvas.jpg" width="360" height="575" alt="Кваст">
+                                <img class="image-border" src="img/g_kvas.jpg" width="360" height="575" alt="Кваст">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">Кваст</a></h2>
                                     <p>Промо-сайт производителя крафтового кваса</p>
-                                    <div class="buy-item"><a href="#">9900 руб.</a></div>
+                                    <a class="buy-item" href="#">9900 руб.</a>
                                 </div>
                             </div>
                         </div>
 
                 <div class="pagination">
-                    <ul>
-                        <li class="active">1</li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">Следующая</a></li>
-                    </ul>
+                    <a class="page-btn active">1</a>
+                    <a class="page-btn" href="#">2</a>
+                    <a class="page-btn" href="#">3</a>
+                    <a class="page-btn" href="#">Следующая</a>
                 </div>
                 </div>
             </div>
         </main>
         <div class="contacts">
-            <div class="container">
+            <div class="container clearfix">
                 <div class="address">
                     <h4>Nёrds design studio</h4>
                     <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                     <p>тел. +7(812)275-75-75</p>
-                    <a href="#" class="btn">Напишите нам</a>
+                    <a href="#" class="btn-feedback">Напишите нам</a>
                 </div>
             </div>
         </div>
@@ -198,9 +195,9 @@
             <div class="container clearfix">
                 <div class="social">
                     <ul>
-                        <li><a class="vk" href="#">Вконтакте</a></li>
-                        <li><a class="facebook" href="#">Facebook</a></li>
-                        <li><a class="instagram" href="#">Instagram</a></li>
+                        <li><a class="social-btn vk" href="#">Вконтакте</a></li>
+                        <li><a class="social-btn facebook" href="#">Facebook</a></li>
+                        <li><a class="social-btn instagram" href="#">Instagram</a></li>
                     </ul>
                 </div>
                 <div class="social-discount">
