@@ -73,8 +73,9 @@ body {
     vertical-align: top;
 
     margin-right: 48px;
-    padding: 10px 0;
+    padding: 0;
     padding-top: 25px;
+    padding-bottom: 3px;
     white-space: nowrap;
     
     position: relative;
@@ -86,7 +87,7 @@ body {
 
     max-width: 160px;
     float: right;
-    padding-bottom: 10px;
+    padding-bottom: 3px;
     padding-top: 25px;
     padding-left: 40px;
     text-align: right;
@@ -131,15 +132,8 @@ body {
     color: #000000;
 }
 
-.main-navigation .active a::before,
-.cart .active::before {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: #fb565a;
-    
-    position: absolute;
-    bottom: -5px;
+.main-header .active {
+    border-bottom: solid 2px #fb565a;
 }
 
 .main-menu a:hover,
