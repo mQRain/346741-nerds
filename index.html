@@ -21,7 +21,7 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="cart">
+                <div class="cart active">
                     <a href="#">Корзина</a>
                 </div>
                 <div class="slider">
@@ -156,5 +156,15 @@
                 </div>
             </div>
         </footer>
+        <div class="modal-feedback">
+           <button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
+            <h2 class="modal-feedback-title">Напишите нам</h2>
+            <form class="feedback-form" method="post" action="#">
+                <div class="feedback-column"><label><span class="feedback-label">Ваше имя:</span><input type="text" id="username" name="username" placeholder="Представьтесь, пожалуйста"></label></div>
+                <div class="feedback-column"><label><span class="feedback-label">Ваш e-mail:</span><input type="text" id="email" name="email" placeholder="Для отправки ответа"></label></div>
+                <div class="feedback-textarea"><label><span class="feedback-label">Текст письма:</span><textarea id="message" name="message" rows="5">В свободной форме</textarea></label></div>
+                <a class="btn" href="#">Отправить</a>
+            </form>
+        </div>
     </body>
 </html>

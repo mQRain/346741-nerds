@@ -123,17 +123,13 @@ body {
     position: relative;
 }
 
-.main-navigation .active {
-    color: #000000;
-}
-
-.main-navigation .active a:hover,
-.cart .active a:hover {
-    color: #000000;
-}
-
 .main-header .active {
+    color: #000000;
     border-bottom: solid 2px #fb565a;
+}
+
+.main-header .active a:hover {
+    color: #000000;
 }
 
 .main-menu a:hover,
@@ -182,7 +178,7 @@ body {
     left: 50%;
     margin-left: -120px;
     text-align: center;
-    z-index: 1000;
+    z-index: 100;
     font-size: 0;
 }
 
@@ -826,6 +822,12 @@ body {
     text-decoration: none;
 }
 
+.modal-feedback .btn {
+    width: 260px;
+    margin-top: 47px;
+    margin-bottom: 0;
+}
+
 .offer-column .btn {
     margin-bottom: 0;
     width: 160px;
@@ -869,8 +871,6 @@ body {
 .offer-column .btn-yellow:hover {
     background-color: #eab534;
 }
-
-
 
 .buy-item:active,
 .btn:active {
@@ -1264,4 +1264,154 @@ body {
 
 .filter-features input[type="checkbox"]:checked + span {
     background-position: 0 104px;
+}
+
+.modal-feedback {
+    width: 760px;
+    padding: 100px;
+    padding-top: 67px;
+    padding-bottom: 85px;
+    background-color: #ffffff;
+    color: #000000;
+    
+    position: fixed;
+    z-index: 1000;
+    bottom: 180px;
+    left: 50%;
+    margin-left: -480px;
+    
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75); 
+}
+
+.modal-feedback-close {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    
+    border: 0;
+    cursor: pointer;
+    
+    background-color: #ffffff;
+    position: absolute;
+    top: 78px;
+    right: 90px;
+    
+    font-size: 0;
+    opacity: 0.3;
+    outline: none;
+}
+
+.modal-feedback-close::before,
+.modal-feedback-close::after {
+    content: "";
+    width: 22px;
+    height: 3px;
+    background-color: #fb565a;
+    border-radius: 1px;
+    
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.modal-feedback-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-feedback-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-feedback-close:hover {
+    opacity: 1;
+}
+
+.modal-feedback-close:active {
+    opacity: 0.1;
+}
+
+.modal-feedback h2 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 40px;
+    
+    color: #000000;
+}
+
+.feedback-form {
+    font-size: 0;
+}
+
+.feedback-column {
+    display: inline-block;
+    margin-bottom: 33px;
+}
+
+.feedback-column:first-child {
+    margin-right: 40px;
+}
+
+.feedback-textarea {
+    margin: 0;
+}
+
+.feedback-label {
+    display: block;
+    width: 160px;
+    margin-bottom: 10px;
+    
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.5);
+    font-family: Roboto, Verdana, sans-serif;
+    
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 2px solid #d7dcde;
+    outline: none;
+    
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+.feedback-form textarea {
+    resize: none;
+
+    padding: 10px;
+    padding-left: 14px;
+    padding-bottom: 12px;
+    vertical-align: top;
+}
+
+.feedback-form input[type="text"] {
+    width: 360px;
+}
+
+.feedback-form input[type="text"]:hover,
+.feedback-form textarea:hover {
+    border: 2px solid #b4b9bb;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form textarea:focus {
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.feedback-form input[type="text"]:invalid,
+.feedback-form textarea:invalid {
+    border: 2px solid #e74246;
+    color: #e74246;
 }
