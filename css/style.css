@@ -107,7 +107,7 @@ body {
     opacity: 0.3;
 }
 
-.main-navigation li a,
+.main-menu a,
 .cart a
 {
     display: block;
@@ -132,7 +132,7 @@ body {
 }
 
 .main-navigation .active a::before,
-.cart .active a::before {
+.cart .active::before {
     content: "";
     width: 100%;
     height: 2px;
@@ -142,12 +142,12 @@ body {
     bottom: -5px;
 }
 
-.main-navigation li a:hover,
+.main-menu a:hover,
 .cart a:hover {
     color: #fb565a;
 }
 
-.main-navigation li a:active,
+.main-menu a:active,
 .cart a:active {
     color: #000000;
     opacity: 0.3;
@@ -231,18 +231,21 @@ body {
 
 .slide-feature:nth-child(1) {
     background-image: url('../img/slide1.png');
+    background-color: #eeeeee;
     background-repeat: no-repeat;
     background-position: 431px 17px;
 }
 
 .slide-feature:nth-child(2) {
     background-image: url('../img/slide2.png');
+    background-color: #eeeeee;
     background-repeat: no-repeat;
     background-position: 496px 0;
 }
 
 .slide-feature:nth-child(3) {
     background-image: url('../img/slide3.png');
+    background-color: #eeeeee;
     background-repeat: no-repeat;
     background-position: 401px 18px;
 }
@@ -315,7 +318,7 @@ body {
     margin-right: 0;
 }
 
-.offers .container .hr {
+.offers .hr {
     float:left;
     margin: 0;
     width: 100%;
@@ -477,7 +480,7 @@ body {
 
 .our-clients img {
     vertical-align: middle;
-    opacity: .2;
+    opacity: 0.2;
     cursor: pointer;
 }
 
@@ -486,7 +489,7 @@ body {
 }
 
 .our-clients img:active {
-    opacity: 1;
+    opacity: 0.1;
 }
 
 .our-clients a:first-child {
@@ -516,6 +519,7 @@ body {
     min-height: 415px;
     
     background-image: url(../img/map.png);
+    background-color: #edebe4;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1024,6 +1028,10 @@ body {
     background-color: #e74246;
 }
 
+.social-btn:active {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
 .social-btn:active::before {
     opacity: 0.3;
 }
@@ -1223,8 +1231,8 @@ body {
 }
 
 
-.filter-grid label::before,
-.filter-features label::before {
+.filter-grid label span,
+.filter-features label span {
     content: "";
     background-image: url(../img/sprite.png);
     opacity: 0.4;
@@ -1232,27 +1240,34 @@ body {
     position: absolute;
 }
 
-.filter-grid label::before {
+.filter-grid label span {
     width: 26px;
     height: 26px;
-    background-position: 0 156px; /* включен 0 206px */
+    background-position: 0 156px;
     left: 1px;
 }
 
-.filter-features label::before {
+.filter-features label span {
     width: 27px;
     height: 23px;
-    background-position: 0 54px; /*  включен 0 104px */
+    background-position: 0 54px;
     left: 0;
 }
 
-.filter-features label:hover::before,
-.filter-grid label:hover::before {
+.filter-features label:hover span,
+.filter-grid label:hover span {
     opacity: 1;
 }
 
-.filter-features label:active::before,
-.filter-grid label:active::before {
+.filter-grid input[type="radio"]:disabled + span,
+.filter-features input[type="checkbox"]:disabled + span {
     opacity: 0.1;
 }
 
+.filter-grid input[type="radio"]:checked + span {
+    background-position: 0 206px;
+}
+
+.filter-features input[type="checkbox"]:checked + span {
+    background-position: 0 104px;
+}
