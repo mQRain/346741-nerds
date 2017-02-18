@@ -514,6 +514,16 @@ body {
     background-position: center;
 }
 
+.contacts .container {
+    position: relative;
+    z-index: 500;
+}
+
+.contacts iframe {
+    position: absolute;
+    z-index: 400;
+}
+
 .address {
     float: left;
     max-width: 219px;
@@ -826,6 +836,8 @@ body {
     width: 260px;
     margin-top: 47px;
     margin-bottom: 0;
+    border: 0;
+    outline: none;
 }
 
 .offer-column .btn {
@@ -1274,13 +1286,15 @@ body {
     background-color: #ffffff;
     color: #000000;
     
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+    
     position: fixed;
     z-index: 1000;
     bottom: 180px;
     left: 50%;
     margin-left: -480px;
     
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75); 
+    display: none;
 }
 
 .modal-feedback-close {
@@ -1369,6 +1383,7 @@ body {
 }
 
 .feedback-form input[type="text"],
+.feedback-form input[type="email"],
 .feedback-form textarea {
     font-size: 16px;
     line-height: 18px;
@@ -1395,23 +1410,60 @@ body {
     vertical-align: top;
 }
 
-.feedback-form input[type="text"] {
+.feedback-form input[type="text"],
+.feedback-form input[type="email"]{
     width: 360px;
 }
 
 .feedback-form input[type="text"]:hover,
+.feedback-form input[type="email"]:hover,
 .feedback-form textarea:hover {
     border: 2px solid #b4b9bb;
 }
 
 .feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
 .feedback-form textarea:focus {
     border: 2px solid #000000;
     color: #000000;
 }
 
 .feedback-form input[type="text"]:invalid,
+.feedback-form input[type="email"]:invalid,
 .feedback-form textarea:invalid {
     border: 2px solid #e74246;
     color: #e74246;
+}
+
+.modal-feedback-show {
+    display: block;
+
+    animation-name: feedback-appear;
+    animation-duration: 0.5s;
+}
+
+.modal-feedback-error {
+    animation-name: feedback-error;
+    animation-duration: 0.3s;
+}
+
+@keyframes feedback-error {
+    0%, 100% {
+        transform: none;
+    }
+    20%, 60% {
+        transform: rotate(0.5deg);
+    }
+    40%, 80% {
+        transform: rotate(-0.5deg);
+    }
+}
+
+@keyframes feedback-appear {
+    0% {
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
