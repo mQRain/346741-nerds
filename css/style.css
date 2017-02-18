@@ -506,22 +506,12 @@ body {
 }
 
 .contacts {
-    min-height: 415px;
-    
+    height: 415px;
+    position: relative;
     background-image: url(../img/map.png);
     background-color: #edebe4;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.contacts .container {
-    position: relative;
-    z-index: 500;
-}
-
-.contacts iframe {
-    position: absolute;
-    z-index: 400;
 }
 
 .address {
@@ -532,6 +522,10 @@ body {
     margin-top: 54px;
     
     background-color: #ffffff;
+    
+    position: absolute;
+    z-index: 998;
+    top: 0;
 }
 
 .address h4 {
