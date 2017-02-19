@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
     <head>
         <link href="css/normalize.min.css" rel="stylesheet">
         <link href="css/style.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <div class="catalog-filters">
                     <form action="#" method="get">
                         <div class="filter-price">
-                            <span class="filter-group">Стоимость:</span>
+                            <b class="filter-group">Стоимость:</b>
                             <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
@@ -49,20 +49,21 @@
                             </div>
                         </div>
                         <div class="filter-grid">
-                            <span class="filter-group">Сетка:</span>
-                            <label><input type="radio" name="grid" value="adaptive" checked>Адаптивная<span></span></label>
-                            <label><input type="radio" name="grid" value="fixed">Фиксированная<span></span></label>
-                            <label><input type="radio" name="grid" value="liquid">Резиновая<span></span></label>
+                            <b class="filter-group">Сетка:</b>
+                            <label class="filter-label"><input type="radio" name="grid" value="adaptive" checked>Адаптивная<span></span></label>
+                            <label class="filter-label"><input type="radio" name="grid" value="fixed">Фиксированная<span></span></label>
+                            <label class="filter-label"><input type="radio" name="grid" value="liquid">Резиновая<span></span></label>
                         </div>
                         <div class= "filter-features">
-                            <span class="filter-group">Особенности:</span>
-                            <label><input type="checkbox" name="slider" id="slider" checked>Слайдер<span></span></label>
-                            <label><input type="checkbox" name="features-block" id="features-block">Блок преимуществ<span></span></label>
-                            <label><input type="checkbox" name="news" id="news" checked>Новости<span></span></label>
-                            <label><input type="checkbox" name="gallery" id="gallery">Галерея<span></span></label>
-                            <label><input type="checkbox" name="cart" id="cart">Корзина<span></span></label>
+                            <b class="filter-group">Особенности:</b>
+                            <label class="filter-label"><input type="checkbox" name="slider" id="slider" checked>Слайдер<span></span></label>
+                            <label class="filter-label"><input type="checkbox" name="features-block" id="features-block">Блок преимуществ<span></span></label>
+                            <label class="filter-label"><input type="checkbox" name="news" id="news" checked>Новости<span></span></label>
+                            <label class="filter-label"><input type="checkbox" name="gallery" id="gallery">Галерея<span></span></label>
+                            <label class="filter-label"><input type="checkbox" name="cart" id="cart">Корзина<span></span></label>
                         </div>
-                        <input type="submit" value="Показать" class="btn">
+                        <input type="submit" value="Показать" class="btn js-submit">
+                        <a class="btn no-js-submit" href="#">Показать</a>
                     </form>
                 </div>
                 <div class="catalog-gallery">
@@ -70,14 +71,14 @@
                     <span class="sorting-header">Сортировать:</span>
                     <div class="select-type">
                         <ul>
-                          <li class="active"><a href="#">По цене</a></li>
+                          <li><a class="active" href="#">По цене</a></li>
                           <li><a href="#">По типу</a></li>
                           <li><a href="#">По названию</a></li>
                         </ul>
                     </div>
                         <div class="sorting-type">
                             <ul class="clearfix">
-                                <li class="triangle-down active"><a href="#"></a></li>
+                                <li class="triangle-down"><a class="active" href="#"></a></li>
                                 <li class="triangle-up"><a href="#"></a></li>
                             </ul>
                         </div>
@@ -90,7 +91,7 @@
                                 <img src="img/g_sedona.jpg" width="360" height="575" alt="Sedona">
                                 <div class="catalog-item-info">
                                     <h2><a class="catalog-item-name" href="#">Sedona</a></h2>
-                                    <p>Информационный сайт<br>для туристов</p>
+                                    <p>Информационный сайт<br>для туристов.</p>
                                     <a href="#" class="buy-item">9 900 руб.</a>
                                 </div>
                             </div>
@@ -153,10 +154,10 @@
 
                 <div class="pagination">
                    <ul>
-                       <li><a class="page-btn active">1</a></li>
-                       <li><a class="page-btn" href="#">2</a></li>
-                       <li><a class="page-btn" href="#">3</a></li>
-                       <li><a class="page-btn" href="#">Следующая</a></li>
+                       <li class="page-btn page-btn-active"><a>1</a></li>
+                       <li class="page-btn"><a href="#">2</a></li>
+                       <li class="page-btn"><a href="#">3</a></li>
+                       <li class="page-btn next-page"><a href="#">Следующая</a></li>
                     </ul>
                 </div>
                 </div>
@@ -169,7 +170,7 @@
                     <h4>Nёrds design studio</h4>
                     <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                     <p>тел. +7 (812) 275-75-75</p>
-                    <a href="#" class="btn">Напишите нам</a>
+                    <a href="feedback.html" class="btn">Напишите нам</a>
                 </div>
             </div>
         </div>
@@ -200,6 +201,10 @@
                 <input type="submit" class="btn" value="Отправить">
             </form>
         </div>
+        <script>
+            var html = document.documentElement;
+            html.className = html.className.replace("no-js", "js");
+        </script>
         <script src="js/feedback.min.js"></script>
     </body>
 </html>

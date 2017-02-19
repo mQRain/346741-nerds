@@ -128,7 +128,7 @@ body {
     border-bottom: solid 2px #fb565a;
 }
 
-.main-header .active a:hover {
+.main-header .active:hover {
     color: #000000;
 }
 
@@ -172,11 +172,11 @@ body {
 
 .slider-controls {
     position: absolute;
-    bottom: 95px;
+    bottom: 96px;
     width: 240px;
     height: 18px;
     left: 50%;
-    margin-left: -120px;
+    margin-left: -112px; /* В макете управление сделано ровно по центру, но если здесь выравнивать при помощи "margin-left: половина ширины", то оно не по центру получается. */
     text-align: center;
     z-index: 100;
     font-size: 0;
@@ -402,7 +402,7 @@ body {
     left: 1px;
 }
 
-.studio .column-right img {
+.studio-features img {
     margin-bottom: 29px;
 }
 
@@ -601,7 +601,7 @@ body {
     margin-right: 0;
 }
 
-.select-type li a {
+.select-type a {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -610,15 +610,15 @@ body {
     opacity: 0.3;
 }
 
-.select-type li a:hover {
+.select-type a:hover {
     opacity: 0.6;
 }
 
-.select-type li a:active {
+.select-type a:active {
     opacity: 1.0;
 }
 
-.select-type .active a {
+.select-type .active {
     opacity: 1.0;
 }
 
@@ -679,7 +679,7 @@ body {
     box-sizing: border-box;
 }
 
-.sorting-type .active a {
+.sorting-type .active {
     opacity: 1.0;
 }
 
@@ -922,26 +922,22 @@ body {
     font-size: 0;
 }
 
-.pagination ul li {
+.pagination li {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     
     width: 50px;
     height: 50px;
     margin-right: 11px;
 }
 
-.page-btn {
-    display: inline-block;
-    vertical-align: middle;
+.pagination a {
+    display: block;
     
     width: 50px;
-    margin-right: 10px;
+    height: 18px;
     padding: 16px 0;
-
-    border-radius: 3px;
-    background-color: #eeeeee;
-
+    
     text-align: center;
     font-size: 16px;
     line-height: 18px;
@@ -951,8 +947,19 @@ body {
     color: #000000;
 }
 
-.pagination li:last-child,
-.pagination li:last-child a {
+.page-btn {
+    display: inline-block;
+    vertical-align: middle;
+    
+    width: 50px;
+    margin-right: 10px;
+
+    border-radius: 3px;
+    background-color: #eeeeee;
+}
+
+.pagination .next-page,
+.next-page a {
     width: 260px;
     margin-right: 0;
 }
@@ -969,17 +976,22 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination .active:active {
+.pagination .page-btn-active:active {
     color: #000000;
 }
 
-.pagination .active {
+.pagination .page-btn-active {
     width: 44px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    height: 44px;
     background-color: #ffffff;
     border: solid 3px #dbdbdb;
     box-shadow: none;
+}
+
+.page-btn-active a {
+    padding: 13px 0;
+    width: 44px;
+    height: 18px;
 }
 
 .social {
@@ -1147,20 +1159,18 @@ body {
     text-align: center;
 }
 
-.price-controls .min-price label{
-    position: absolute;
-    left: 20px;
-    margin-right: 33px;
+.price-controls label {
+    text-transform: uppercase;
+    line-height: 22px;
+}
+
+.price-controls .min-price {
+    margin-right: 28px;
 }
 
 .price-controls .max-price {
     position: absolute;
     right: 0;
-}
-
-.price-controls label {
-    text-transform: uppercase;
-    line-height: 22px;
 }
 
 .catalog-filters {
@@ -1231,8 +1241,8 @@ body {
 }
 
 
-.filter-grid label span,
-.filter-features label span {
+.filter-grid span,
+.filter-features span {
     content: "";
     background-image: url(../img/sprite.png);
     opacity: 0.4;
@@ -1240,22 +1250,22 @@ body {
     position: absolute;
 }
 
-.filter-grid label span {
+.filter-grid span {
     width: 26px;
     height: 26px;
     background-position: 0 156px;
     left: 1px;
 }
 
-.filter-features label span {
+.filter-features span {
     width: 27px;
     height: 23px;
     background-position: 0 54px;
     left: 0;
 }
 
-.filter-features label:hover span,
-.filter-grid label:hover span {
+.filter-label:hover span,
+.filter-label:hover span {
     opacity: 1;
 }
 
@@ -1265,11 +1275,27 @@ body {
 }
 
 .filter-grid input[type="radio"]:checked + span {
-    background-position: 0 206px;
+    background-position: 0 205px;
 }
 
 .filter-features input[type="checkbox"]:checked + span {
     background-position: 0 104px;
+}
+
+.no-js .js-submit {
+    display: none;
+}
+
+.no-js .no-js-submit {
+    display: block;
+}
+
+.js .js-submit {
+    display: block;
+}
+
+.js .no-js-submit {
+    display: none;
 }
 
 .modal-feedback {
@@ -1355,6 +1381,8 @@ body {
 
 .feedback-column {
     display: inline-block;
+    vertical-align: middle;
+    
     margin-bottom: 33px;
 }
 
@@ -1431,33 +1459,63 @@ body {
 
 .modal-feedback-show {
     display: block;
-
-    animation-name: feedback-appear;
-    animation-duration: 0.5s;
+    -webkit-animation: feedback-appear 0.5s;
+    animation: feedback-appear 0.5s;
 }
 
 .modal-feedback-error {
-    animation-name: feedback-error;
-    animation-duration: 0.3s;
+    -webkit-animation: feedback-error 0.3s;
+    animation: feedback-error 0.3s;
+}
+
+@-webkit-keyframes feedback-error {
+    0%, 100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+    20%, 60% {
+        -webkit-transform: rotate(0.5deg);
+        transform: rotate(0.5deg);
+    }
+    40%, 80% {
+        -webkit-transform: rotate(-0.5deg);
+        transform: rotate(-0.5deg);
+    }
 }
 
 @keyframes feedback-error {
     0%, 100% {
+        -webkit-transform: none;
         transform: none;
     }
     20%, 60% {
+        -webkit-transform: rotate(0.5deg);
         transform: rotate(0.5deg);
     }
     40%, 80% {
+        -webkit-transform: rotate(-0.5deg);
         transform: rotate(-0.5deg);
+    }
+}
+
+@-webkit-keyframes feedback-appear {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 }
 
 @keyframes feedback-appear {
     0% {
+        -webkit-transform: scale(0);
         transform: scale(0);
     }
     100%{
+        -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
